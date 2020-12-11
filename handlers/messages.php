@@ -22,12 +22,15 @@
             $query=$db->prepare("SELECT * FROM messages");
             $run=$query->execute();
             $rs=$query->fetchAll(PDO::FETCH_OBJ);
-            echo var_dump($rs);
+            //echo var_dump($rs);
      
            $chat='';
            foreach( $rs as $message)
           {
-            $chat .=$message->message;
+            // $chat .=$message->message.'<br />';
+            $chat .='<div class="single-message">
+                     <strong>'.$message->user.':</strong> '.$message->message.'
+                    </div>';
           }
           echo $chat;
           break;

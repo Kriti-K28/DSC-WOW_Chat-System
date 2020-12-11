@@ -85,16 +85,23 @@
     background-color: rgb(84, 119, 196);
     flex: 2;
     min-height:420px ;
+    text-align: left;
     transition: all 2s ease;
 } 
 .textarea
 {
     width: 90%;
     padding: 2px;
+    margin-left: 3px;
     margin-top: 2px;
     margin-right: -1px;
     transition: all 2s ease;
     
+}
+.single-message
+{
+    padding : 5px 0px 5px 0px;
+    border-bottom:1px solid rgb(243, 231, 231)
 }
 #radio_contacts:checked ~ #inner_right_panel
 {

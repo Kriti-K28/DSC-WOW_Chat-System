@@ -15,7 +15,7 @@
        session_start();
         $_SESSION['username']="Abc Xyz";
     ?>
-
+     
      <div id="wrapper">        
         <div id="left_panel">
            <div style=" padding: 10px;">
@@ -46,7 +46,7 @@
                      <p>hiii</p>
                  </div>
                 <hr>
-                  <form action="" method="POST" id="messageForm">
+                  <form action="" method="POST" id="messageForm" onSubmit="window.location.reload()">
                  
                     <textarea name="message"  class="textarea"id="" cols="50" rows="5"></textarea>
                  </form>
@@ -56,7 +56,8 @@
     </div>
     <!--Jquery code for textarea to submit the message -->
     <script>
-        LoadChat()
+        LoadChat();
+       
        function LoadChat()
        {
            $.post('handlers/messages.php?action=getMessages',function(response){
