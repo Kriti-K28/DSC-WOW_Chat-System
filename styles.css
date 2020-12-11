@@ -85,8 +85,10 @@
     background-color: rgb(84, 119, 196);
     flex: 2;
     min-height:420px ;
+    height:420px;
     text-align: left;
     transition: all 2s ease;
+    overflow: auto;
 } 
 .textarea
 {
@@ -100,8 +102,12 @@
 }
 .single-message
 {
-    padding : 5px 0px 5px 0px;
+     padding : 5px 5px 5px 5px; 
     border-bottom:1px solid rgb(243, 231, 231)
+}
+.single-message span
+{
+    float : right;
 }
 #radio_contacts:checked ~ #inner_right_panel
 {

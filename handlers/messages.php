@@ -30,7 +30,8 @@
             // $chat .=$message->message.'<br />';
             $chat .='<div class="single-message">
                      <strong>'.$message->user.':</strong> '.$message->message.'
-                    </div>';
+                    <span>'.date('H:i',strtotime($message->date)).'</span>
+                     </div>';
           }
           echo $chat;
           break;

@@ -11,11 +11,6 @@
 </head>
 
 <body>
-    <?php
-       session_start();
-        $_SESSION['username']="Abc Xyz";
-    ?>
-     
      <div id="wrapper">        
         <div id="left_panel">
            <div style=" padding: 10px;">
@@ -43,9 +38,9 @@
               <input type="radio" id="radio_setting" name="myradio" style="display: none;">
               <div id="inner_right_panel">
                  <div id="chat_msg"> 
-                     <p>hiii</p>
+                    
                  </div>
-                <hr>
+               
                   <form action="" method="POST" id="messageForm" onSubmit="window.location.reload()">
                  
                     <textarea name="message"  class="textarea"id="" cols="50" rows="5"></textarea>
@@ -57,11 +52,15 @@
     <!--Jquery code for textarea to submit the message -->
     <script>
         LoadChat();
-       
+       setInterval(function()
+       {
+        LoadChat();
+       },1000);
        function LoadChat()
        {
            $.post('handlers/messages.php?action=getMessages',function(response){
                   $('#chat_msg').html(response);
+                  $('#chat_msg').scrollTop($('#chat_msg').prop('scrollHeight'));
            });
        }
         $('.textarea').keyup(function(e)
