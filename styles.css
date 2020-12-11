@@ -79,6 +79,7 @@
     background-color: rgb(84, 119, 196);
     flex: 2;
     min-height:430px ;
+    min-width:200px;
     transition: all 2s ease;
 }
  #chat_msg
