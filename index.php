@@ -42,7 +42,7 @@
               <input type="radio" id="radio_contacts" name="myradio" style="display: none;">
               <input type="radio" id="radio_setting" name="myradio" style="display: none;">
               <div id="inner_right_panel">
-                 <div class="chat"> 
+                 <div id="chat_msg"> 
                      <p>hiii</p>
                  </div>
                 <hr>
@@ -56,14 +56,13 @@
     </div>
     <!--Jquery code for textarea to submit the message -->
     <script>
-         LoadChat();
-        function LoadChat()
-        {
-            $.post('handler/messages.php?action=getMessages',function(response)
-            {
-                $('.chat').html(response);
-            });
-        }
+        LoadChat()
+       function LoadChat()
+       {
+           $.post('handlers/messages.php?action=getMessages',function(response){
+                  $('#chat_msg').html(response);
+           });
+       }
         $('.textarea').keyup(function(e)
         {
             //whenever user hit enter form submitted

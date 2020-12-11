@@ -80,7 +80,7 @@
     min-height:430px ;
     transition: all 2s ease;
 }
- .chat
+ #chat_msg
 {
     background-color: rgb(84, 119, 196);
     flex: 2;
