@@ -59,8 +59,18 @@
        function LoadChat()
        {
            $.post('handlers/messages.php?action=getMessages',function(response){
+                   var scrollpos=$('#chat_msg').scrollTop();
+                   var scrollpos=parseInt(scrollpos) + 440;
+                   var scrollHeight=$('#chat_msg').prop('scrollHeight');
                   $('#chat_msg').html(response);
-                  $('#chat_msg').scrollTop($('#chat_msg').prop('scrollHeight'));
+                  if(scrollpos < scrollHeight)
+                   {}
+                  else{
+                    $('#chat_msg').scrollTop($('#chat_msg').prop('scrollHeight'));
+                  }
+                  
+                  
+                 
            });
        }
         $('.textarea').keyup(function(e)
