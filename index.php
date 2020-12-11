@@ -14,16 +14,16 @@
      <div id="wrapper">        
         <div id="left_panel">
            <div style=" padding: 10px;">
-              <img id="profile_imag" src="UI/imag/avatar.png" alt="">
+              <img id="profile_imag" src="assets/images/user.png" alt="">
               <br>
               Name:ABC
               <br>
               <span style="font-size: 12px; opacity: 0.5;">abc@gmail.com</span>
               <br><br><br>
               <div>
-                <label id="label_chat" for="radio_chat">Chat <img src="UI/imag/demo.jpg" alt=""></label>
-                <label id="label_contact" for="radio_contacts">Contacts <img src="UI/imag/demo.jpg" alt=""></label>
-                <label id="label_setting" for="radio_setting">Setting <img src="UI/imag/demo.jpg" alt=""></label>
+                <label id="label_chat" for="radio_chat">Chat <img src="assets/images/chat.png" alt=""></label>
+                <label id="label_contact" for="radio_contacts">Contacts <img src="assets/images/contact.png" alt=""></label>
+                <label id="label_setting" for="radio_setting">Setting <img src="assets/images/setting.png" alt=""></label>
               </div> 
            </div>
         </div>
@@ -31,7 +31,13 @@
            <div id="header">Let's Chat</div>
            <div id="container" style="display: flex;">
               <div id="inner_left_panel">
-              
+                <table>
+                    <tr>
+                        <td>
+                            <img src="" alt="">
+                        </td>
+                    </tr>
+                </table>
               </div>
               <input type="radio" id="radio_chat" name="myradio" style="display: none;">
               <input type="radio" id="radio_contacts" name="myradio" style="display: none;">
