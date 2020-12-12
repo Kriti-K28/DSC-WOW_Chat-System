@@ -36,9 +36,9 @@
                       <input type="submit"   value="Logout">
                       <span class="popuptext" id="myPopup">Are you sure you want to close 
                       <form  method="POST" action="logout.php">  
-                          <input type="submit"  class="button" value="yes" >
+                          <input type="submit"  class="button" value="yes" id="yes_btn">
                       </form> 
-                       <input type="submit"  class="button" value="No">
+                       <input type="submit"  class="button" value="No" id="no_btn">
                     </span>
                </div>
                 <script>
@@ -53,11 +53,7 @@
            </div>
         </div>
         <div id="right_panel">
-<<<<<<< HEAD
-          
-=======
-           
->>>>>>> 657af8cc97cf84a063755b9089652cd252603d58
+         
            <div id="container" style="display: flex;">
               <div id="inner_left_panel">
               </div>
