@@ -37,7 +37,27 @@
               <input type="radio" id="radio_contacts" name="myradio" style="display: none;">
               <input type="radio" id="radio_setting" name="myradio" style="display: none;">
               <div id="inner_right_panel">
-                 <div id="chat_msg">  </div>
+                 <div id="chat_msg"> 
+                 <?php 
+                  include 'dbh.php';
+                  $sql="SELECT * FROM posts";
+            //    global $conn;
+                  $result = $conn->query($sql);
+                  if($result->num_rows >= 0)
+                 {
+                   while($row = $result->fetch_assoc())
+                   {
+                       echo  $row["msg"]."::". $row["name"]."--" .$row["date"]."<br>";
+                       echo "<br>";
+                   }
+                }
+                 else
+                 {
+                   echo "0 result";
+                 }
+                 $conn->close();
+               ?>
+                 </div>
                   <form action="" method="POST" id="messageForm" onSubmit="window.location.reload()">  
                     <textarea name="message"  class="textarea"id="" cols="50" rows="5"></textarea>
                  </form>
@@ -46,7 +66,7 @@
         </div>
     </div>
     <!--Jquery code for textarea to submit the message -->
-    <script>
+    <!-- <script>
         LoadChat();
        setInterval(function()
        {
@@ -87,7 +107,7 @@
            });
            return false;
         });
-    </script> 
+    </script>  -->
 </body>
 </html>
 <!-- JS code for animation of panel  -->
