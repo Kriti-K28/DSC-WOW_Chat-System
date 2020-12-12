@@ -34,11 +34,11 @@
                 <!-- Logout session start here -->
                 <div action="logout.php" class="popup" onclick="myFunction()">
                       <input type="submit"  class="button" value="Logout">
-                      <span class="popuptext" id="myPopup">Are you sure you want to close 
+                      <span class="popuptext" id="myPopup">Are you sure you ?
                       <form  method="POST" action="logout.php">  
-                          <input type="submit"  class="button" value="yes" >
+                          <input type="submit" id="yes_btn" class="button" value="yes">
                       </form> 
-                       <input type="submit"  class="button" value="No">
+                       <input type="submit"  class="button" id ="no_btn" value="No">
                     </span>
                </div>
                 <script>
