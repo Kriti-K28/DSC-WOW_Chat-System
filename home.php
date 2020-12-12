@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,15 +61,17 @@
                  $conn->close();
                ?>
                  </div>
-                  <form action="" method="POST" id="messageForm" onSubmit="window.location.reload()">  
-                    <textarea name="message"  class="textarea"id="" cols="50" rows="5"></textarea>
+                  <form  method="POST" id="messageForm" onSubmit="window.location.reload()" action="send.php">  
+                    <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="5"></textarea>
+                    <input type="submit" value="Send">
                  </form>
+                 <form action="logout.php"></form>
               </div>
            </div>
         </div>
     </div>
     <!--Jquery code for textarea to submit the message -->
-    <!-- <script>
+     <script>
         LoadChat();
        setInterval(function()
        {
@@ -95,19 +100,19 @@
                 $('form').submit();
             } 
         });
-        $('form').submit(function() 
-        {
-           var message = $('.textarea').val();
-           $.post('handlers/messages.php?action=sendMessage&message='+message,function(response)
-           {
-              if(response==1)
-              {
-                  document.getElementById('messageForm').reset();
-              }
-           });
-           return false;
-        });
-    </script>  -->
+      //   $('form').submit(function() 
+      //   {
+      //      var message = $('.textarea').val();
+      //      $.post('handlers/messages.php?action=sendMessage&message='+message,function(response)
+      //      {
+      //         if(response==1)
+      //         {
+      //             document.getElementById('messageForm').reset();
+      //         }
+      //      });
+      //      return false;
+      //   });
+    </script>  
 </body>
 </html>
 <!-- JS code for animation of panel  -->
