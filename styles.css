@@ -254,13 +254,22 @@ input[type=radio]
 /* Signup page css starts*/
 .home_page
 {
-    max-width: 80%;
+
+    max-width: 85%;
+   /* display:grid; */
+    /* if want to increase width */
+
     max-width: 85%;
     min-height: 500px;
     margin: auto;
     font-size: 13px;
     background-color: #03506f;
     padding-left: 10px;
+
+    padding-left: 20px;
+    
+    /* grid-column-gap: 50px; */
+
 }
 .login_btn,.signup_btn
 {
