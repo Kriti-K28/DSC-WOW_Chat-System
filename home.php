@@ -25,22 +25,22 @@
               <br>
               <p> Name: <?php echo $_SESSION['name']?></p>
               
-              <span style="font-size: 12px; opacity: 0.5;">abc@gmail.com</span>
+              <span style="font-size: 12px; opacity: 0.5;"><?php echo $_SESSION['name']?>@gmail.com</span>
               <br><br><br>
               <div style="color:#30475e">
                 <label id="label_chat" for="radio_chat" >Chat <img src="assets/images/chat.png" alt="" style="margin:-7px 30px 0px -20px"></label>
                 <label id="label_contact" for="radio_contacts">Contacts <img src="assets/images/contact.png" alt=""style="margin:-7px 30px 0px -20px"></label>
                 <label id="label_setting" for="radio_setting">Setting <img src="assets/images/setting.png" alt="" style="margin:-7px 30px 0px -20px"></label>
                 <!-- Logout session start here -->
-                <input type="submit" class="button"  value="Logout" onclick="myFunction()">
-                <div action="logout.php" class="popup" >     
-                      <span class="popuptext" id="myPopup">Are you sure? 
+                <div action="logout.php" class="popup" onclick="myFunction()" style="background-color:#222831;">
+                      <input type="submit" class="button" id="logout" value="Logout">
+                      <span class="popuptext" id="myPopup">Are you sure ?
                       <form  method="POST" action="logout.php">  
                           <input type="submit"  class="button" value="yes" id="yes_btn">
                       </form> 
                        <input type="submit"  class="button" value="No" id="no_btn">
                     </span>
-                 </div>
+               </div>
                 <script>
                  // When the user clicks on div, open the popup
                     function myFunction() {

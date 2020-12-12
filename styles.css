@@ -87,7 +87,7 @@ body {
 }
 #right_panel
 {
-   min-height: 500px;
+   min-height: 600px;
    /* background-color:green; */
    flex:4;
    text-align: center;
@@ -204,6 +204,17 @@ input[type=radio]
     vertical-align: middle;
 }
 /* Logout popout css starts */
+#logout
+{
+    background-color: #ffa62b;font-weight:bold;border-radius:25px; width:300px; height:45px; cursor:pointer;
+    transition: all 1s ease ;
+    border:none;
+}
+#logout:hover{
+    background-color:#30475e;
+    color:#e8e8e8;
+}
+
 .popup {
   position: relative;
   /* display: inline-block; */
