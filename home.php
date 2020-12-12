@@ -17,7 +17,7 @@
 </head>
 
 <body>
-     <p>hiii</p>
+<div id="header">Let's Chat</div>
      <div id="wrapper">        
         <div id="left_panel">
            <div style=" padding: 10px;">
@@ -27,7 +27,7 @@
               <br>
               <span style="font-size: 12px; opacity: 0.5;">abc@gmail.com</span>
               <br><br><br>
-              <div>
+              <div style="color:#30475e">
                 <label id="label_chat" for="radio_chat">Chat <img src="assets/images/chat.png" alt=""></label>
                 <label id="label_contact" for="radio_contacts">Contacts <img src="assets/images/contact.png" alt=""></label>
                 <label id="label_setting" for="radio_setting">Setting <img src="assets/images/setting.png" alt=""></label>
@@ -53,7 +53,7 @@
            </div>
         </div>
         <div id="right_panel">
-           <div id="header">Let's Chat</div>
+          
            <div id="container" style="display: flex;">
               <div id="inner_left_panel">
               </div>
