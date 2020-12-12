@@ -1,20 +1,22 @@
-html {}
-body {
-    height: 50vh;
-}
 *{
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing:1px;
+    
 }
 #wrapper 
 {
     display:flex; 
     /* if want to increase width */
-    max-height: 500px;
+    
+    min-height: 500px;
     margin:auto;
     font-size: 13px;
-
 }
+/* @font-face
+{
+    font-family: .....;
+    src:url(...);
+} */
 #left_panel
 {
    min-height: 500px;
@@ -23,33 +25,8 @@ body {
    text-align: center;
    color:honeydew;
    padding:0.9%;
+   
 }
-
-/* contact page start here */
-#contact_img
-{
-    width:50px;border:solid thin grey;
-    border-radius:50%;
-}
-#contact_text
-{
-    text-align:center;
-    margin-top:-40px;margin-bottom:25px;
-    text-transform: uppercase;
-    font-size:12px;
-}
-.contact_class
-  {
-      background-color: #222831;
-      color: #e8e8e8;
-      font-size: 15px;
-      text-align: left;
-      padding:10px;
-      border-radius: 30px;     
-      margin:5px;
-  }
-/* contact page end here */
-
 #profile_imag
 {
     width:50%;
@@ -57,8 +34,21 @@ body {
     border-radius:50%;
     margin:10px;  
 }
+#contact_img
+{
+    width:30px;border:solid thin grey;
+    border-radius:50%;
+}
+#contact_text
+{
+    text-align:center;
+    margin-top:-30px;margin-bottom:10px;
+    text-transform: uppercase;
+    font-size:12px;
+}
 #left_panel label
-{   
+{
+    
     height: 30px;
     display: block;
    color: black;
@@ -83,7 +73,6 @@ body {
 {
    float:right;
    width: 25px;
-
 }
 #right_panel
 {
@@ -94,18 +83,20 @@ body {
 }
 #header
 {
-    background-color:#213e3b;
-    height: 40px;
-    font-size: 30px;
+    background-color:#222831;
+    height: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
     padding:12px;
     padding-left:30px;
-    color: honeydew;
+    color: #ffa62b;
+    text-align:center;
     margin:auto;
 }
 #inner_left_panel
 {
-    background-color: #e8e8e8;
-    flex: 1; 
+    background-color: #222831;
+    flex: 0.7; 
     min-height: 430px;
 }
 #inner_right_panel
@@ -121,14 +112,15 @@ body {
     background-color: #222831;
     min-height:380px ;
     height:380px;
+    height:420px;
     text-align: left;
     transition: all 2s ease;
     overflow: auto;
-    font-size: 15px;
+    font-size: 12px;
     color: #e8e8e8;
     padding:20px;
     line-height:15px;
-    
+    text-transform: capitalize;
 } 
 .textarea
 {
@@ -167,6 +159,8 @@ body {
 /* Sign Up page Styling */
 #wrap
 {
+    /* display:flex;  */
+    /* if want to increase width */
     max-width: 800px;
     min-height: 500px;
     margin:auto;
@@ -174,7 +168,14 @@ body {
     margin: auto;
     color: grey;
 }
-
+/* form
+{
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+   
+} */
 input[type=text],input[type=password],input[type=button]
 {
     padding: 10px;
@@ -182,7 +183,6 @@ input[type=text],input[type=password],input[type=button]
     width: 98%;
     border-radius: 5px;
     border:solid thin;
-
 }
 input[type=button]
 {
@@ -211,15 +211,15 @@ input[type=radio]
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  
   height: 30px;
   display: block;
   background-color:#e8e8e8;
   color:#30475e;
   cursor: pointer;
   padding: 5px;
-  /* transition: all 1s ease ; */
+  transition: all 1s ease ;
 }
-
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
@@ -237,33 +237,29 @@ input[type=radio]
   font-size: 25px;
   /* margin-left: -80px; */
 }
-
 /* Popup arrow */
 .popup .popuptext::after {
   content: "";
   position: absolute;
   top: 100%;
   left: 50%;
-  
+  /* width:100px; */
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: rgb(240, 237, 237) transparent transparent transparent;
 }
-
 /* Toggle this class - hide and show the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
-
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
   to {opacity: 1;}
 }
-
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
@@ -277,8 +273,6 @@ input[type=radio]
     padding:5px;
     margin: 50px 0 0 20px;
     color: antiquewhite;
-    cursor:pointer;
-
 }
 #no_btn
 {
@@ -287,9 +281,8 @@ input[type=radio]
     width:80px;
     background-color:  #03506f;
     padding:5px;
-    margin: 50px 20px 0 0;
-    color:antiquewhite;
-    cursor:pointer;
+    margin: 60px 70px 0 0;
+    color:antiquewhite
 }
 /* Logout popout ends here */
 /* Signup page css starts*/
@@ -323,5 +316,18 @@ table tr td {
     /* padding-bottom: 10px;
     padding-left: 50px; */
   }
+  .contact_class
+  {
+      background-color:#e8e8e8;
+      color: #222831;
+      font-size: 15px;
+      text-align: left;
+      padding:5px;
+      border-radius:5px 35px 35px 5px;
+      margin:5px;
+  }
+  .button
+  {
+      background-color: #03506f;
+  }
 /* Signup page end here */
-
