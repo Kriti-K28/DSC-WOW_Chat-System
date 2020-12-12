@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  
+<div id="header">Let's Chat</div>
      <div id="wrapper">        
         <div id="left_panel">
            <div style=" padding: 10px;">
@@ -27,18 +27,18 @@
               <br>
               <span style="font-size: 12px; opacity: 0.5;">abc@gmail.com</span>
               <br><br><br>
-              <div>
+              <div style="color:#30475e">
                 <label id="label_chat" for="radio_chat">Chat <img src="assets/images/chat.png" alt=""></label>
                 <label id="label_contact" for="radio_contacts">Contacts <img src="assets/images/contact.png" alt=""></label>
                 <label id="label_setting" for="radio_setting">Setting <img src="assets/images/setting.png" alt=""></label>
                 <!-- Logout session start here -->
                 <div action="logout.php" class="popup" onclick="myFunction()">
-                      <input type="submit"  class="button" value="Logout">
-                      <span class="popuptext" id="myPopup">Are you sure you ?
+                      <input type="submit"   value="Logout">
+                      <span class="popuptext" id="myPopup">Are you sure you want to close 
                       <form  method="POST" action="logout.php">  
-                          <input type="submit" id="yes_btn" class="button" value="Yes">
+                          <input type="submit"  class="button" value="yes" >
                       </form> 
-                       <input type="submit"  class="button" id ="no_btn" value="No">
+                       <input type="submit"  class="button" value="No">
                     </span>
                </div>
                 <script>
@@ -53,7 +53,7 @@
            </div>
         </div>
         <div id="right_panel">
-           <div id="header">Let's Chat</div>
+           
            <div id="container" style="display: flex;">
               <div id="inner_left_panel">
               </div>
@@ -71,9 +71,9 @@
                  {
                    while($row = $result->fetch_assoc())
                    {
-                     echo "<span style='padding:5px;'><strong>" .$row["name"] ."</strong></span>" .": ". $row["msg"]."<span style='float:right;padding-right:5px;'>".$row["date"]."</span>","<br>";
-                     // echo "<span style=' border-bottom:3px solid white;'></span>"
-                     echo "<hr>";
+                     echo "<span style='padding:5px;'><strong>" .$row["name"] ."</strong></span>" .": ". $row["msg"]."<span style='float:right;padding-right:5px;'>".$row["date"]."</span>";
+                     
+                    echo "<br>";
                      echo "<br>";
                    }
                 }
