@@ -15,7 +15,6 @@
 "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
     </script> 
 </head>
-
 <body>
 <div id="header">Let's Chat</div>
      <div id="wrapper">        
@@ -28,19 +27,19 @@
               <span style="font-size: 12px; opacity: 0.5;">abc@gmail.com</span>
               <br><br><br>
               <div style="color:#30475e">
-                <label id="label_chat" for="radio_chat" >Chat <img src="assets/images/chat.png" alt="" style="margin:-7px 30px 0px -20px"></label>
-                <label id="label_contact" for="radio_contacts">Contacts <img src="assets/images/contact.png" alt=""style="margin:-7px 30px 0px -20px"></label>
+                <label id="label_chat" for="radio_chat">Chat <img src="assets/images/chat.png" alt="" style="margin:-7px 30px 0px -20px"></label>
+                <label id="label_contact" for="radio_contacts">Contacts <img src="assets/images/contact.png" alt="" style="margin:-7px 30px 0px -20px"></label>
                 <label id="label_setting" for="radio_setting">Setting <img src="assets/images/setting.png" alt="" style="margin:-7px 30px 0px -20px"></label>
                 <!-- Logout session start here -->
                 <input type="submit" class="button"  value="Logout" onclick="myFunction()">
-                <div action="logout.php" class="popup" >     
+                <div action="logout.php" class="popup"   >                      
                       <span class="popuptext" id="myPopup">Are you sure? 
                       <form  method="POST" action="logout.php">  
                           <input type="submit"  class="button" value="yes" id="yes_btn">
                       </form> 
                        <input type="submit"  class="button" value="No" id="no_btn">
                     </span>
-                 </div>
+               </div>
                 <script>
                  // When the user clicks on div, open the popup
                     function myFunction() {
@@ -56,23 +55,36 @@
            
            <div id="container" style="display: flex;">
               <div id="inner_left_panel">
-                  <div class="contact_class">
-                       <img id="contact_img"  src="assets/images/user.png" alt="">
-                       <p id="contact_text">Contact 1 </p>
-                  </div>
-                  <div class="contact_class">
-                     <img id="contact_img" src="assets/images/user.png" src="assets/images/user.png" alt="">
-                     <p id="contact_text">Contact 2 </p>
-                  </div>
-                  <div class="contact_class">
-                     <img id="contact_img"src="assets/images/user.png" src="assets/images/user.png" alt="">
-                     <p id="contact_text">Contact 3 </p>
-                  </div>
-                  <div class="contact_class">
-                     <img id="contact_img" src="assets/images/user.png" src="assets/images/user.png" alt="">
-                     <p id="contact_text">Contact 3 </p>
-                  </div>
-               </div>   
+               <br><br>
+              <div class="contact_class">
+                 <img id="contact_img"  src="assets/images/user.png" alt="">
+                 <p id="contact_text">Contact 1 </p>
+               </div>
+               <div class="contact_class">
+                 <img id="contact_img" src="assets/images/user.png" src="assets/images/user.png" alt="">
+                 <p id="contact_text">Contact 1 </p>
+               </div>
+               <div class="contact_class">
+                 <img id="contact_img"src="assets/images/user.png" src="assets/images/user.png" alt="">
+                 <p id="contact_text">Contact 1 </p>
+               </div><div class="contact_class">
+                 <img id="contact_img"  src="assets/images/user.png" alt="">
+                 <p id="contact_text">Contact 1 </p>
+               </div>
+               <div class="contact_class">
+                 <img id="contact_img" src="assets/images/user.png" src="assets/images/user.png" alt="">
+                 <p id="contact_text">Contact 1 </p>
+               </div>
+               <div class="contact_class">
+                 <img id="contact_img"src="assets/images/user.png" src="assets/images/user.png" alt="">
+                 <p id="contact_text">Contact 1 </p>
+               </div>
+               <div class="contact_class">
+                 <img id="contact_img" src="assets/images/user.png" src="assets/images/user.png" alt="">
+                 <p id="contact_text">Contact 1 </p>
+               </div>
+              
+              </div>
               <input type="radio" id="radio_chat" name="myradio" style="display: none;">              
               <input type="radio" id="radio_contacts" name="myradio" style="display: none;">
               <input type="radio" id="radio_setting" name="myradio" style="display: none;">
@@ -88,8 +100,10 @@
                    while($row = $result->fetch_assoc())
                    {
                      echo "<span style='padding:5px;'><strong>" .$row["name"] ."</strong></span>" .": ". $row["msg"]."<span style='float:right;padding-right:5px;'>".$row["date"]."</span>";
+                     
                     echo "<br>";
                      echo "<br>";
+                     
                    }
                 }
                  else
@@ -138,7 +152,11 @@
                   
       //      });
       //  }
-     
+      $(document).ready(function() { 
+            $("button").click(function() { 
+                $(document).scrollTop($(document).height()); 
+            }); 
+        }); 
         $('.textarea').keyup(function(e)
         {
             //whenever user hit enter form submitted
