@@ -115,11 +115,7 @@
                   
       //      });
       //  }
-      $(document).ready(function() { 
-            $("button").click(function() { 
-                $(document).scrollTop($(document).height()); 
-            }); 
-        }); 
+     
         $('.textarea').keyup(function(e)
         {
             //whenever user hit enter form submitted
