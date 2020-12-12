@@ -11,6 +11,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" 
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
     </script>
+     <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
 </head>
 
 <body>
@@ -28,7 +31,25 @@
                 <label id="label_chat" for="radio_chat">Chat <img src="assets/images/chat.png" alt=""></label>
                 <label id="label_contact" for="radio_contacts">Contacts <img src="assets/images/contact.png" alt=""></label>
                 <label id="label_setting" for="radio_setting">Setting <img src="assets/images/setting.png" alt=""></label>
-              </div> 
+                <!-- Logout session start here -->
+                <div action="logout.php" class="popup" onclick="myFunction()">
+                      <input type="submit"  class="button" value="Logout">
+                      <span class="popuptext" id="myPopup">Are you sure you want to close 
+                      <form  method="POST" action="logout.php">  
+                          <input type="submit"  class="button" value="yes" >
+                      </form> 
+                       <input type="submit"  class="button" value="No">
+                    </span>
+               </div>
+                <script>
+                 // When the user clicks on div, open the popup
+                    function myFunction() {
+                    var popup = document.getElementById("myPopup");
+                    popup.classList.toggle("show");
+                 }
+                </script>
+                <!-- Logout out session end here -->
+               </div> 
            </div>
         </div>
         <div id="right_panel">
@@ -61,37 +82,42 @@
                  $conn->close();
                ?>
                  </div>
-                  <form  method="POST" id="messageForm" onSubmit="window.location.reload()" action="send.php">  
+                 <form  method="POST" id="messageForm" onSubmit="window.location.reload()" action="send.php">  
                     <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="5"></textarea>
-                    <input type="submit" value="Send">
-                 </form>
-                 <form action="logout.php"></form>
+                    <input type="submit"  class="button" value="Send">
+                 </form> 
+                
               </div>
            </div>
         </div>
     </div>
     <!--Jquery code for textarea to submit the message -->
      <script>
-        LoadChat();
-       setInterval(function()
-       {
-        LoadChat();
-       },1000);
-       function LoadChat()
-       {
-           $.post('handlers/messages.php?action=getMessages',function(response){
-                   var scrollpos=$('#chat_msg').scrollTop();
-                   var scrollpos=parseInt(scrollpos) + 440;
-                   var scrollHeight=$('#chat_msg').prop('scrollHeight');
-                  $('#chat_msg').html(response);
-                  if(scrollpos < scrollHeight)
-                   {}
-                  else{
-                    $('#chat_msg').scrollTop($('#chat_msg').prop('scrollHeight'));
-                  }
+      //   LoadChat();
+      //  setInterval(function()
+      //  {
+      //   LoadChat();
+      //  },1000);
+      //  function LoadChat()
+      //  {
+      //      $.post('handlers/messages.php?action=getMessages',function(response){
+      //              var scrollpos=$('#chat_msg').scrollTop();
+      //              var scrollpos=parseInt(scrollpos) + 440;
+      //              var scrollHeight=$('#chat_msg').prop('scrollHeight');
+      //             $('#chat_msg').html(response);
+      //             if(scrollpos < scrollHeight)
+      //              {}
+      //             else{
+      //               $('#chat_msg').scrollTop($('#chat_msg').prop('scrollHeight'));
+      //             }
                   
-           });
-       }
+      //      });
+      //  }
+      $(document).ready(function() { 
+            $("button").click(function() { 
+                $(document).scrollTop($(document).height()); 
+            }); 
+        }); 
         $('.textarea').keyup(function(e)
         {
             //whenever user hit enter form submitted
