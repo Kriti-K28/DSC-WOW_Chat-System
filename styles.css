@@ -104,6 +104,20 @@
     transition: all 2s ease;
     
 }
+#send
+{
+    width:600px; 
+    font-weight:bold;
+    border:none; 
+    background-color: #5c969e;
+    color:#f4f4f2;
+    font-size:20px;
+    cursor:pointer;
+    padding: 0 0px 5px 5px;
+    border-radius:10px;
+    height:30px;
+}
+ 
 #radio_contacts:checked ~ #inner_right_panel
 {
     flex: 0;

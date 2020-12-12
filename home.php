@@ -74,10 +74,8 @@
                    while($row = $result->fetch_assoc())
                    {
                      echo "<span style='padding:5px;'><strong>" .$row["name"] ."</strong></span>" .": ". $row["msg"]."<span style='float:right;padding-right:5px;'>".$row["date"]."</span>";
-                     
                     echo "<br>";
                      echo "<br>";
-                     
                    }
                 }
                  else
@@ -87,9 +85,16 @@
                  $conn->close();
                ?>
                  </div>
-                 <form  method="POST" id="messageForm" onSubmit="window.location.reload()" action="send.php">  
-                    <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="5"></textarea>
-                    <br><br><input type="submit"  class="button" value="Send"> <br>
+                 
+                         <form  method="POST" id="messageForm" onSubmit="window.location.reload()" action="send.php">  
+                         <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="3" style="width:70% padding:0 0 0 20px; border-radius:10px; " ></textarea>
+                      <br>
+                         <input type="submit"  id="send" class="button"  value="Send" > <br>             
+                    </tr>
+                 </table>
+                
+                    
+                   
                  </form> 
                 
               </div>
