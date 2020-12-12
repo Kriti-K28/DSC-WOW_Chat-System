@@ -36,7 +36,7 @@
                       <input type="submit"  class="button" value="Logout">
                       <span class="popuptext" id="myPopup">Are you sure you ?
                       <form  method="POST" action="logout.php">  
-                          <input type="submit" id="yes_btn" class="button" value="yes">
+                          <input type="submit" id="yes_btn" class="button" value="Yes">
                       </form> 
                        <input type="submit"  class="button" id ="no_btn" value="No">
                     </span>

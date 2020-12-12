@@ -228,7 +228,7 @@ input[type=radio]
     float: left;
     border-radius: 5px;
     width:80px;
-    background-color: rgb(93, 224, 185);;
+    background-color:  #03506f;
     padding:5px;
     margin: 60px 0 0 90px;
     color: antiquewhite;
@@ -239,7 +239,7 @@ input[type=radio]
     float: right;
     border-radius: 5px;
     width:80px;
-    background-color: rgb(93, 224, 185);;
+    background-color:  #03506f;
     padding:5px;
     margin: 60px 90px 0 0;
     color:antiquewhite
