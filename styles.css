@@ -95,11 +95,13 @@ body {
 #header
 {
     background-color:#213e3b;
-    height: 40px;
-    font-size: 30px;
+    height: 50px;
+    font-size: 40px;
+    text-transform: uppercase;
     padding:12px;
     padding-left:30px;
-    color: honeydew;
+    color: #ffa62b;
+    text-align:center;
     margin:auto;
 }
 #inner_left_panel
@@ -312,7 +314,7 @@ input[type=radio]
     min-height: 500px;
     margin: auto;
     font-size: 13px;
-    background-color: #03506f;
+    background-color: #222831;
     padding-left: 20px;
     
     /* grid-column-gap: 50px; */
@@ -321,7 +323,7 @@ input[type=radio]
 {
     border-radius: 10px;
     width:80px;
-    background-color: rgb(93, 224, 185);;
+    background-color: #ffa62b;
     padding:10px;
     margin-left:8px;
 }
