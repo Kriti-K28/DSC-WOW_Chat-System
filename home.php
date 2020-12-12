@@ -23,8 +23,8 @@
            <div style=" padding: 10px;">
               <img id="profile_imag" src="assets/images/user.png" alt="">
               <br>
-              Name:ABC
-              <br>
+              <p> Name: <?php echo $_SESSION['name']?></p>
+              
               <span style="font-size: 12px; opacity: 0.5;">abc@gmail.com</span>
               <br><br><br>
               <div style="color:#30475e">
