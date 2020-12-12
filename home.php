@@ -65,7 +65,7 @@
                  <?php 
                   include 'dbh.php';
                   $sql="SELECT * FROM posts";
-            //    global $conn;
+                  // global $conn;
                   $result = $conn->query($sql);
                   if($result->num_rows >= 0)
                  {
