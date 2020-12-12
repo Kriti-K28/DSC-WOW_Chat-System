@@ -33,7 +33,7 @@
                 <label id="label_setting" for="radio_setting">Setting <img src="assets/images/setting.png" alt=""></label>
                 <!-- Logout session start here -->
                 <div action="logout.php" class="popup" onclick="myFunction()">
-                      <input type="submit"   value="Logout">
+                      <input type="submit" class="button"  value="Logout">
                       <span class="popuptext" id="myPopup">Are you sure you want to close 
                       <form  method="POST" action="logout.php">  
                           <input type="submit"  class="button" value="yes" id="yes_btn">
@@ -53,11 +53,13 @@
            </div>
         </div>
         <div id="right_panel">
-         
+           
            <div id="container" style="display: flex;">
               <div id="inner_left_panel">
+                 <br>
+              <div style="background-color:black">Chat <br><br><br></div>
               </div>
-              <input type="radio" id="radio_chat" name="myradio" style="display: none;">
+              <input type="radio" id="radio_chat" name="myradio" style="display: none;">              
               <input type="radio" id="radio_contacts" name="myradio" style="display: none;">
               <input type="radio" id="radio_setting" name="myradio" style="display: none;">
               <div id="inner_right_panel">
@@ -75,6 +77,7 @@
                      
                     echo "<br>";
                      echo "<br>";
+                     
                    }
                 }
                  else
@@ -86,7 +89,7 @@
                  </div>
                  <form  method="POST" id="messageForm" onSubmit="window.location.reload()" action="send.php">  
                     <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="5"></textarea>
-                    <input type="submit"  class="button" value="Send">
+                    <br><br><input type="submit"  class="button" value="Send"> <br>
                  </form> 
                 
               </div>
