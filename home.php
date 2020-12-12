@@ -71,11 +71,10 @@
                  {
                    while($row = $result->fetch_assoc())
                    {
-                       echo  "<span style='padding:5px;'><strong>" .$row["name"] ."</strong></span>" .": ". $row["msg"]."<span style='float:right;padding-right:5px;'>".$row["date"]."</span>","<br>";
-                       echo "<br>";
-                     
-                     
-
+                     echo "<span style='padding:5px;'><strong>" .$row["name"] ."</strong></span>" .": ". $row["msg"]."<span style='float:right;padding-right:5px;'>".$row["date"]."</span>","<br>";
+                     // echo "<span style=' border-bottom:3px solid white;'></span>"
+                     echo "<hr>";
+                     echo "<br>";
                    }
                 }
                  else

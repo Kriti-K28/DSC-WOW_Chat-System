@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div id="info">
-       <h2>Login here</h2>
-       <form action="login.php" method="post">
-           <label for="">Username: </label>
-           <input type="text" name="uname" placeholder="User name"> <br> <br>
-           <label for="">Password: </label>
-           <input type="password" name="pass" placeholder="Password"> <br> <br>
-           <button type="submit">Login</button>
-       </form>
-
-       <form action="signup.php" method="post">
+    <div id="info" class="home_page">
+        <table>
+            <tr>
+            <td>
+                 <h2>Login here</h2>
+                <form action="login.php" method="post">
+                  <label for="">Username: </label>
+                  <input type="text" name="uname" placeholder="User name"> <br> <br>
+                  <label for="">Password: </label>
+                  <input type="password" name="pass" placeholder="Password"> <br> <br>
+                  <button type="submit" class="login_btn">Login</button>
+                </form>
+            </td>
+            <td></td>
+            <td>
+            <form action="signup.php" method="post">
           <h2>Don't have an account sign up here</h2>
           <label for="">Username: </label>
           <input type="text" name="uname" placeholder="Username"> <br> <br>
@@ -24,8 +30,14 @@
           <input type="text" name="Email" placeholder="Email"> <br> <br>
           <label for="">Password</label>
           <input type="text" name="Password" placeholder="Password"> <br> <br>
-          <button type="submit">Sign-up</button>
+          <button type="submit" class="signup_btn">Sign-up</button>
         </form>
+            </td>
+            </tr>
+            
+        </table>
+     
+      
     </div>
 </body>
 </html>
