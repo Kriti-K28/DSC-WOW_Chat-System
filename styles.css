@@ -1,7 +1,27 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'balsamiq_sansregular' ;
     letter-spacing:1px;
+   
     
+    
+}
+
+@font-face {
+    font-family: 'lobsterregular';
+    src: url('lobster-regular-webfont.woff2') format('woff2'),
+         url('lobster-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'balsamiq_sansregular';
+    src: url('balsamiqsans-regular-webfont.woff2') format('woff2'),
+         url('balsamiqsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 #wrapper 
 {
@@ -19,12 +39,12 @@
 } */
 #left_panel
 {
-   min-height: 430px;
-   background-color:#456268;
+   min-height: 500px;
+   background-color: #222831;
    flex:1;
    text-align: center;
    color:honeydew;
-   /* padding:0.9%; */
+   padding:0.9%;
    
 }
 #profile_imag
@@ -44,8 +64,8 @@
     text-align:center;
     margin-top:-30px;margin-bottom:10px;
     text-transform: uppercase;
-    font-size:14px;
-    font-family: 'Lobster Two', cursive;
+    font-size:12px;
+    font-family:'Lobster Two';
 }
 .contact_class
   {
@@ -69,14 +89,14 @@
 #left_panel label
 {
     
-    height: 25px;
+    height: 30px;
     display: block;
    color: black;
    background-color: #ffa62b;
+   /*border-bottom: solid thin rgba(255, 255, 255, 0.568);*/
    cursor: pointer;
-   padding:10px 0px 0px 0px;
-   font-size:14px;
-   font-family: 'Lobster Two', cursive;
+   padding:15px 0px 0px 0px;
+   font-size:12px;
    transition: all 1s ease ;
    margin-bottom:5px;
    text-transform: uppercase;
@@ -88,7 +108,6 @@
 {
    background-color:#30475e;
    color:#e8e8e8;
-  
 }
 #left_panel label img
 {
@@ -97,7 +116,7 @@
 }
 #right_panel
 {
-   min-height: 430px;
+   min-height: 500px;
    /* background-color:green; */
    flex:4;
    text-align: center;
@@ -135,7 +154,7 @@
     background-color: #222831;
     min-height:380px ;
     height:380px;
-    /* height:420px; */
+    height:420px;
     text-align: left;
     transition: all 2s ease;
     overflow: auto;
@@ -273,7 +292,7 @@ input[type=radio]
   transition: all 1s ease ;
 }
 /* The actual popup */
-.popup .popuptext {
+.popup .popuptext .popup2{
   visibility: hidden;
   width: 250px;
   height:80px;
@@ -289,8 +308,24 @@ input[type=radio]
   font-size: 25px;
   /* margin-left: -80px; */
 }
+.popup2
+{
+    visibility: hidden;
+  width: 250px;
+  height:100px;
+  background-color: rgb(240, 234, 234);
+  color: rgb(34, 23, 23);
+  text-align: center;
+  border-radius: 6px;
+  padding: 50px 0;
+  
+  
+  
+  left: 6px;
+  font-size: 25px;
+}
 /* Popup arrow */
-.popup .popuptext::after {
+.popup .popuptext::after .popup2 {
   content: "";
   position: absolute;
   top: 100%;
@@ -302,7 +337,7 @@ input[type=radio]
   border-color: rgb(240, 237, 237) transparent transparent transparent;
 }
 /* Toggle this class - hide and show the popup */
-.popup .show {
+.popup .show .popup2{
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
@@ -340,35 +375,48 @@ input[type=radio]
     width:80px;
     background-color:  #03506f;
     padding:5px;
-    margin: 50px 20px 0 0;
-    color:antiquewhite;
-    cursor: pointer;
-    transition: all 1s ease ;
-}
-#no_btn:hover 
-{
-    background-color: #7EA00e;
-    color: rgb(5, 60, 105);
+    margin: 60px 70px 0 0;
+    color:antiquewhite
 }
 /* Logout popout ends here */
 /* Signup page css starts*/
 .home_page
 {
-    /* if want to increase width */
-    max-width: 85%;
-    min-height: 500px;
-    margin: auto;
+   /* display:grid; */
+   color: #e8e8e8;
     font-size: 13px;
-    background-color: #222831;
+    background-color: #213502;
     padding-left: 20px;
+    margin-top:-34px;
+    
+    /* grid-column-gap: 50px; */
 }
 .login_btn,.signup_btn
 {
+    color: #e8e8e8;
     border-radius: 10px;
     width:80px;
-    background-color: #ffa62b;
+    background-color: #7ea00e;
     padding:10px;
     margin-left:8px;
+    border:none;
+    
+}
+.login_btn:hover,.signup_btn:hover{
+    cursor: pointer;
+}
+.login_area
+{
+    max-width:25%;
+    margin: -210px 0px 100px 60%;
+    height:500px;
+}
+#lets_chat
+{
+    color: #dcd964;
+    font-family: 'lobsterregular';
+    font-size:140px;
+    margin:120px 0px 0px 60px;
 }
 table tr td:empty {
     width: 80px;
@@ -378,5 +426,19 @@ table tr td {
     padding:10px 10px 10px 60px;
     /* padding-bottom: 10px;
     padding-left: 50px; */
+  }
+  .contact_class
+  {
+      background-color:#e8e8e8;
+      color: #222831;
+      font-size: 15px;
+      text-align: left;
+      padding:5px;
+      border-radius:5px 35px 35px 5px;
+      margin:5px;
+  }
+  .button
+  {
+      background-color: #03506f;
   }
 /* Signup page end here */
