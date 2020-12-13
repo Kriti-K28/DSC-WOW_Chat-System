@@ -36,8 +36,6 @@
                 <div action="logout.php" class="popup" onclick="myFunction()" style="background-color:#456268;">
                       <input type="submit" class="button" id="logout" value="LOGOUT">
                       <input type="image" src="assets/images/logout.png" alt="Submit" width="30" height="30" style="margin:-40px 0 15px 235px;">
-                      <!-- <img src="assets/images/logout.png" alt="" style=" float:right;
-   width: 25px; margin-top:-60px z-index:1;"> -->
                       <span class="popuptext" id="myPopup">Are you sure ?
                       <form  method="POST" action="logout.php">  
                           <input type="submit"  class="button" value="Yes" id="yes_btn" style="cursor:pointer;">
@@ -117,44 +115,19 @@
                  }
                  $conn->close();
                ?>
-                 </div>
-                 
+                 </div>         
                          <form  method="POST" id="messageForm" onSubmit="window.location.reload()" action="send.php">  
-                         <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="3" placeholder="Send your msg here" ></textarea>
-                      <br>
-                         <input type="submit"  id="send" class="button"  value="Send" > 
-                         <br>      
-                
-                    
-                   
-                 </form> 
-                
+                            <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="3" placeholder="Send your msg here" ></textarea>
+                           <br>
+                           <input type="submit"  id="send" class="button"  value="Send" > 
+                          <br>                 
+                         </form> 
               </div>
            </div>
         </div>
     </div>
     <!--Jquery code for textarea to submit the message -->
      <script>
-      //   LoadChat();
-      //  setInterval(function()
-      //  {
-      //   LoadChat();
-      //  },1000);
-      //  function LoadChat()
-      //  {
-      //      $.post('handlers/messages.php?action=getMessages',function(response){
-      //              var scrollpos=$('#chat_msg').scrollTop();
-      //              var scrollpos=parseInt(scrollpos) + 440;
-      //              var scrollHeight=$('#chat_msg').prop('scrollHeight');
-      //             $('#chat_msg').html(response);
-      //             if(scrollpos < scrollHeight)
-      //              {}
-      //             else{
-      //               $('#chat_msg').scrollTop($('#chat_msg').prop('scrollHeight'));
-      //             }
-                  
-      //      });
-      //  }
       $(document).ready(function() { 
             $("button").click(function() { 
                 $(document).scrollTop($(document).height()); 
@@ -168,18 +141,6 @@
                 $('form').submit();
             } 
         });
-      //   $('form').submit(function() 
-      //   {
-      //      var message = $('.textarea').val();
-      //      $.post('handlers/messages.php?action=sendMessage&message='+message,function(response)
-      //      {
-      //         if(response==1)
-      //         {
-      //             document.getElementById('messageForm').reset();
-      //         }
-      //      });
-      //      return false;
-      //   });
     </script>  
 </body>
 </html>

@@ -1,13 +1,36 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing:1px;
+}
+*{
+    font-family: 'balsamiq_sansregular' ;
+    letter-spacing:1px;
+   
     
+    
+}
+
+@font-face {
+    font-family: 'lobsterregular';
+    src: url('lobster-regular-webfont.woff2') format('woff2'),
+         url('lobster-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'balsamiq_sansregular';
+    src: url('balsamiqsans-regular-webfont.woff2') format('woff2'),
+         url('balsamiqsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 #wrapper 
 {
     display:flex; 
     /* if want to increase width */
-    
     min-height: 430px;
     margin:auto;
     font-size: 13px;
@@ -102,6 +125,14 @@
    flex:4;
    text-align: center;
 }
+#lets_chat
+{
+    color: #dcd964;
+    font-family: 'lobsterregular';
+    font-size:140px;
+    margin:10px 0px 0px 60px;
+}
+
 #header
 {
 
@@ -114,6 +145,8 @@
     color: #ffa62b;
     text-align:center;
     margin:auto;
+    font-family: 'lobsterregular';
+    
 }
 #inner_left_panel
 {
@@ -361,14 +394,28 @@ input[type=radio]
     font-size: 13px;
     background-color: #222831;
     padding-left: 20px;
+    margin-top:-34px;
+    color: #e8e8e8;
 }
 .login_btn,.signup_btn
 {
+    color: #e8e8e8;
     border-radius: 10px;
     width:80px;
-    background-color: #ffa62b;
+    background-color: #7ea00e;
     padding:10px;
     margin-left:8px;
+    border:none;
+    
+}
+.login_btn:hover,.signup_btn:hover{
+    cursor: pointer;
+}
+.login_area
+{
+    max-width:25%;
+    /* margin: 2px 0px 1px 10%; */
+    height:200px;
 }
 table tr td:empty {
     width: 80px;
@@ -379,59 +426,5 @@ table tr td {
     /* padding-bottom: 10px;
     padding-left: 50px; */
   }
-  .popup1 {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
   
-  /* The actual popup */
-  .popup1 .popuptext1 {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup1 .popuptext1::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class - hide and show the popup */
-  .popup1 .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
 /* Signup page end here */

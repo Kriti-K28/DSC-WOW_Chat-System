@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,11 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+<br><br>
+        <div class="home_page">
+        <br>
+        <div id="lets_chat">Let's Chat</div>
+        <div style="color:  #e8e8e8; margin:-10px 0px 90px 180px; "><i>connecting people. connecting lives</i></div>
     <div id="info" class="home_page">
         <table>
             <tr>
@@ -20,22 +26,6 @@
                   <button type="submit" class="login_btn">Login</button>
                 </form>
             </td>
-            <!-- <td>
-            <div class="popup1" onclick="myFunction1()">
-            <button type="submit" class="signup_btn">signup</button>
-              <span class="popuptext1" id="myPopup1">A Simple Popup!</span>
-            </div>
-
-            <script>
-             // When the user clicks on div, open the popup
-            function myFunction1() {
-            var popup = document.getElementById("myPopup1");
-            popup.classList.toggle("show");
-           }
-            </script>
-            </td> -->
-            
-
             <td></td>
             <td>
             <form action="signup.php" method="post">
@@ -50,10 +40,7 @@
         </form>
             </td>
             </tr>
-            
-        </table>
-     
-      
-    </div>
-</body>
-</html>
+        </div>
+        </div>
+    </body>
+    </html>
