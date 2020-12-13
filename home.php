@@ -11,9 +11,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" 
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
     </script>
-     <script src= 
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+     <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
     </script> 
+  
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="header">Let's Chat</div>
@@ -34,9 +35,12 @@
 
                 <div action="logout.php" class="popup" onclick="myFunction()" style="background-color:#456268;">
                       <input type="submit" class="button" id="logout" value="LOGOUT">
+                      <input type="image" src="assets/images/logout.png" alt="Submit" width="30" height="30" style="margin:-40px 0 15px 235px;">
+                      <!-- <img src="assets/images/logout.png" alt="" style=" float:right;
+   width: 25px; margin-top:-60px z-index:1;"> -->
                       <span class="popuptext" id="myPopup">Are you sure ?
                       <form  method="POST" action="logout.php">  
-                          <input type="submit"  class="button" value="yes" id="yes_btn">
+                          <input type="submit"  class="button" value="Yes" id="yes_btn" style="cursor:pointer;">
                       </form> 
                        <input type="submit"  class="button" value="No" id="no_btn">
                     </span>
@@ -63,26 +67,26 @@
                </div>
                <div class="contact_class">
                  <img id="contact_img" src="assets/images/user.png" src="assets/images/user.png" alt="">
-                 <p id="contact_text">Contact 1 </p>
+                 <p id="contact_text">Contact 2 </p>
                </div>
                <div class="contact_class">
                  <img id="contact_img"src="assets/images/user.png" src="assets/images/user.png" alt="">
-                 <p id="contact_text">Contact 1 </p>
+                 <p id="contact_text">Contact 3 </p>
                </div><div class="contact_class">
                  <img id="contact_img"  src="assets/images/user.png" alt="">
-                 <p id="contact_text">Contact 1 </p>
+                 <p id="contact_text">Contact 4 </p>
                </div>
                <div class="contact_class">
                  <img id="contact_img" src="assets/images/user.png" src="assets/images/user.png" alt="">
-                 <p id="contact_text">Contact 1 </p>
+                 <p id="contact_text">Contact 5 </p>
                </div>
                <div class="contact_class">
                  <img id="contact_img"src="assets/images/user.png" src="assets/images/user.png" alt="">
-                 <p id="contact_text">Contact 1 </p>
+                 <p id="contact_text">Contact 6 </p>
                </div>
                <div class="contact_class">
                  <img id="contact_img" src="assets/images/user.png" src="assets/images/user.png" alt="">
-                 <p id="contact_text">Contact 1 </p>
+                 <p id="contact_text">Contact 7 </p>
                </div>
               
               </div>
@@ -116,7 +120,7 @@
                  </div>
                  
                          <form  method="POST" id="messageForm" onSubmit="window.location.reload()" action="send.php">  
-                         <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="3" style="width:70% padding:0 0 5px 20px; border-radius:10px; " ></textarea>
+                         <textarea name="msg"  class="textarea" class="form-control" cols="50" rows="3" placeholder="Send your msg here" ></textarea>
                       <br>
                          <input type="submit"  id="send" class="button"  value="Send" > 
                          <br>      
