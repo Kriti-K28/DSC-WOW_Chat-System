@@ -13,8 +13,7 @@ and then we have to make 3 three tables:
   msg
   name
   date 
- 
-2st table(name: signup) :
+ 2st table(name: signup) :
   Structure is 
   uid     Auto increment on
   username
