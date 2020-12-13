@@ -20,6 +20,22 @@
                   <button type="submit" class="login_btn">Login</button>
                 </form>
             </td>
+            <!-- <td>
+            <div class="popup1" onclick="myFunction1()">
+            <button type="submit" class="signup_btn">signup</button>
+              <span class="popuptext1" id="myPopup1">A Simple Popup!</span>
+            </div>
+
+            <script>
+             // When the user clicks on div, open the popup
+            function myFunction1() {
+            var popup = document.getElementById("myPopup1");
+            popup.classList.toggle("show");
+           }
+            </script>
+            </td> -->
+            
+
             <td></td>
             <td>
             <form action="signup.php" method="post">

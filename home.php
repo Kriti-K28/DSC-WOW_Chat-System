@@ -23,9 +23,9 @@
            <div style=" padding: 10px;">
               <img id="profile_imag" src="assets/images/user.png" alt="">
               <br>
-              <p> Name: <?php echo $_SESSION['name']?></p>
+              <p> Name: <?php echo $_SESSION['name']?>
               
-              <span style="font-size: 12px; opacity: 0.5;"><?php echo $_SESSION['name']?>@gmail.com</span>
+              <span style="font-size: 12px; opacity: 0.5;"> <br><?php echo $_SESSION['name']?> @gmail.com</span></p>
               <br><br><br>
               <div style="color:#30475e">
                 <label id="label_chat" for="radio_chat">Chat <img src="assets/images/chat.png" alt="" style="margin:-7px 30px 0px -20px"></label>
