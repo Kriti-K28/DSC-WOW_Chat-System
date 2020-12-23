@@ -13,7 +13,7 @@
         <br>
         <div id="lets_chat">Let's Chat</div>
         <div style="color:  #e8e8e8; margin:-10px 0px 90px 180px; "><i>connecting people. connecting lives</i></div>
-    <div id="info" class="home_page">
+    <div id="info" class="home_page"><br>
         <table>
             <tr>
             <td>
